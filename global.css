@@ -9,7 +9,6 @@ textarea {
 table {
   font-size: 20px;
   font-size: 2rem;
-  width: 300px;
   border-color: #eee; }
 
 #finaltable:hover td {
@@ -49,6 +48,21 @@ html {
   border-color: red;
   font-size: 20px;
   font-size: 2rem; }
+
+#header {
+  position: top;
+  top: 1em;
+  left: 30%;
+  padding: 5px;
+  font-style: italic;
+  background-color: #eee; }
+
+.boton {
+  padding: 15px 32px;
+  background-color: #F4FA58;
+  border-color: #743EA5; }
+  .boton:hover {
+    background-color: #eee; }
 
 h1 {
   font-size: 20px;

@@ -26,6 +26,15 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin btn-theme {
+   padding: 15px 32px;
+   background-color: $colorHover;
+   border-color: #743EA5;
+   &:hover {
+      background-color: $colorBlanco;
+   }
+ }
+
 $font-stack:   Helvetica, sans-serif;
 $backgroundcolor:  #DA9797;
 $colorNegro: #000000;
@@ -34,11 +43,12 @@ $colorVerde: rgba(0, 164, 42, 0.8);
 $colorHover: #F4FA58;
 $colorFondo:   rgba(23, 86, 202, 0.3);
 
+$tamanoAplicacion: 650px;
+
 input        { @include position(right, $top: 1em, $left: 30%); }
 textarea     { border-color: $colorFondo; }
 table        {
   @include font-size(2);
-  width: 300px;
   border-color: $colorBlanco;
 }
 
@@ -58,12 +68,25 @@ html {
   background-color: $colorFondo;
   padding: 5%;
   padding-right:  10%;
-  width: 650px;
+  width: $tamanoAplicacion;
 }
+
 #result      {
   @include position(top, $top: 1em, $left: 50%);
   border-color: red;
   @include font-size(2);
+}
+
+#header {
+  @include position(top, $top: 1em, $left: 30%);
+  padding: 5px;
+  font-style: italic;
+  background-color: $colorBlanco;
+
+}
+
+.boton {
+   @include btn-theme();
 }
 
 h1 {
