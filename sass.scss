@@ -26,7 +26,7 @@
   transform: translate(-50%, -50%);
 }
 
-$font-stack:    Helvetica, sans-serif;
+$font-stack:   Helvetica, sans-serif;
 $backgroundcolor:  #DA9797;
 $colorNegro: #000000;
 $colorBlanco: #eee;
@@ -38,7 +38,7 @@ input        { @include position(right, $top: 1em, $left: 30%); }
 textarea     { border-color: $colorFondo; }
 table        {
   @include font-size(2);
-  width: 10%;
+  width: 300px;
   border-color: $colorBlanco;
 }
 
@@ -57,6 +57,8 @@ html {
 #fondo_tabla {
   background-color: $colorFondo;
   padding: 5%;
+  padding-right:  10%;
+  width: 650px;
 }
 #result      {
   @include position(top, $top: 1em, $left: 50%);
@@ -66,7 +68,9 @@ html {
 
 h1 {
     @include font-size(2);
-    margin: 2%;
-    padding:0;
+    margin: 4%;
+    text-align: center;
+    padding:1%;
     color: $colorNegro;
+    background-color: $colorBlanco;
 }
