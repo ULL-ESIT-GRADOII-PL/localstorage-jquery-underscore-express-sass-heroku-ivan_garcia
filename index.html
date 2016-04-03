@@ -21,18 +21,20 @@
      </script>
   </head>
   <body>
-    <h1>Comma Separated Value Analyzer</h1>
-    <div>
-      <p><i> Go to the <a href="https://github.com/crguezl/csv">repo</a>.</i></p>
-      <i>Write a CSV string. Click the table button. The program outputs a table with the specified data.</i>
-    </div>
-    <table>
-      <tr>
-        <th>CSV string:</th> <!-- autofocus attribute is HTML5 -->
-        <td><textarea autofocus cols = "80" rows = "5" id="original"></textarea></td> 
-      </tr>
-    </table>
-    <button type="button">table:</button><br>
-    <span class="output" id="finaltable"></span>
+    <div id="fondo_tabla">
+      <h1>Comma Separated Value Analyzer</h1>
+      <div>
+        <p><i> Go to the <a href="https://github.com/crguezl/csv">repo</a>.</i></p><br>
+        <i>Write a CSV string. Click the table button. The program outputs a table with the specified data.</i>
+      </div>
+      <table>
+        <tr>
+          <th>CSV string:</th> <!-- autofocus attribute is HTML5 -->
+          <td><textarea autofocus cols = "80" rows = "5" id="original"></textarea></td>
+        </tr>
+      </table>
+      <button type="button">table:</button><br>
+      <span class="output" id="finaltable"></span>
+  </div>
   </body>
 </html>
