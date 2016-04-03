@@ -3,6 +3,7 @@
   // See http://en.wikipedia.org/wiki/Comma-separated_values
 
   var regexp = /"((?:[^"\\]|\\.)*)"|([^,\s]+)|,\s*(?=,|$)|^\s*,/g
+
   exports.calculate = function(original) {
     var lines = original.split(/\n+\s*/);
     var commonLength = lines[0].match(regexp).length;
@@ -14,7 +15,8 @@
       var removeescapedquotes = removelastquote.replace(/\\"/, '"');
       return removeescapedquotes;
     };
-
+//asignamos el localStorage
+if (window.localStorage) localStorage.original = original;
     for (var t in lines) {
       var temp = lines[t];
       var m = temp.match(regexp);
@@ -22,7 +24,7 @@
       var error = false;
 
       // skip empty lines and comments
-      if (temp.match(/(^\s*$)|(^#.*)/)) continue; 
+      if (temp.match(/(^\s*$)|(^#.*)/)) continue;
       if (m) {
         result = m.map(removeQuotes);
         error = (commonLength != m.length);
@@ -36,5 +38,12 @@
     }
     return r;
   };
-})(this);
 
+//escribimos localStorage en id original
+window.onload = function () {
+// If the browser supports localStorage and we have some stored data
+if (window.localStorage && localStorage.original) {
+document.getElementById("original").value = localStorage.original;
+}
+};
+})(this);
