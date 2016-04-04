@@ -4,9 +4,10 @@
 
   var regexp = /"((?:[^"\\]|\\.)*)"|([^,\s]+)|,\s*(?=,|$)|^\s*,/g
 
-  exports.calculate = function(original) {
-//var original = document.getElementById("original");
-    var lines = original.value.split(/\n+\s*/);
+  exports.calculate = function(original11) {
+var original = document.getElementById("original");
+var a =original.value;
+    var lines = a.split(/\n+\s*/);
     var commonLength = lines[0].match(regexp).length;
     var r = [];
     var removeQuotes = function(field) {
@@ -41,4 +42,11 @@ finaltable.innerHTML = _.template(template, {items: r});
 
     return r;
   };
+
+  window.onload = function () {
+// If the browser supports localStorage and we have some stored data
+if (window.localStorage && localStorage.original) {
+document.getElementById("original").value = localStorage.original;
+}
+}
 })(this);
