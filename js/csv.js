@@ -4,10 +4,9 @@
 
   var regexp = /"((?:[^"\\]|\\.)*)"|([^,\s]+)|,\s*(?=,|$)|^\s*,/g
 
-  exports.calculate = function(original11) {
-var original = document.getElementById("original");
-var a =original.value;
-    var lines = a.split(/\n+\s*/);
+  exports.calculate = function(original) {
+//var a =original.value;
+    var lines = original.split(/\n+\s*/);
     var commonLength = lines[0].match(regexp).length;
     var r = [];
     var removeQuotes = function(field) {
