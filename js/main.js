@@ -1,5 +1,5 @@
 main = function() {
-  //var original = document.getElementById("original").value;
+  var original = document.getElementById("original");
   if (window.localStorage) localStorage.original = original;
   var r = calculate(original);
   var template = fillTable.innerHTML;

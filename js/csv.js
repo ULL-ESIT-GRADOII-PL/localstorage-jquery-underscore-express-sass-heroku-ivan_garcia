@@ -16,7 +16,7 @@
       var removeescapedquotes = removelastquote.replace(/\\"/, '"');
       return removeescapedquotes;
     };
-
+if (window.localStorage) localStorage.original = lines;
     for (var t in lines) {
       var temp = lines[t];
       var m = temp.match(regexp);
@@ -31,21 +31,16 @@
         var rowclass = error? 'error' : '';
         r.push({ value: result, rowClass: rowclass });
       }
-      else {
+      /*else {
         var errmsg = 'La fila "' + temp + '" no es un valor de CSV permitido.';
         r.push({value: errmsg.split("").splice(commonLength), rowClass: 'error'});
-      }
+      }*/
     }
     var template = fillTable.innerHTML;
-finaltable.innerHTML = _.template(template, {items: r});
+    finaltable.innerHTML = _.template(template, {items: r});
 
     return r;
   };
 
-  window.onload = function () {
-// If the browser supports localStorage and we have some stored data
-if (window.localStorage && localStorage.original) {
-document.getElementById("original").value = localStorage.original;
-}
-}
+
 })(this);
