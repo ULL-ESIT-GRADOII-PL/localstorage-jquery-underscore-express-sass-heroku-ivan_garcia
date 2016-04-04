@@ -6,7 +6,7 @@
 
   exports.calculate = function(original) {
 //var a =original.value;
-    var lines = original.split(/\n+\s*/);
+    var lines = original.value.split(/\n+\s*/);
     var commonLength = lines[0].match(regexp).length;
     var r = [];
     var removeQuotes = function(field) {
