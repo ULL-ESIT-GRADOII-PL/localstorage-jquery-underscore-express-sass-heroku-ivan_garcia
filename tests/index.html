@@ -6,8 +6,6 @@
 	<link href="mocha.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="../js/csv.js"></script>
-	<script type="text/javascript" src="../csv.js"></script>
 	<!-- Tabla resultado -->
 	<script type="text/html" id='fillTable'>
 	    <table id="result" class="center">
@@ -27,18 +25,20 @@
 	<div>
 	<i>Write a CSV string. Click the table button. The program outputs a table with the specified data.</i>
 	</div>
-	<table>
+  <table>
 	<tr>
 	<th>CSV string:</th> <!-- autofocus attribute is HTML5 -->
 	<td><textarea autofocus cols = "80" rows = "5" id="original"></textarea></td>
 	</tr>
-	</table>
+</table>
 
 	<button type="button">table:</button><br>
 	<span class="output" id="finaltable"></span>
 	<script src="chai.js"></script>
 	<script src="mocha.js"></script>
 
+  <script src="../js/csv.js"></script>
+  <script src="../js/main.js"></script>
 
 	<script>mocha.setup('tdd')</script>
 	<script src="tests.js"></script>

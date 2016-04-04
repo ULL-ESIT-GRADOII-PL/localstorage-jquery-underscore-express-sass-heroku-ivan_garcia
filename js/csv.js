@@ -5,7 +5,8 @@
   var regexp = /"((?:[^"\\]|\\.)*)"|([^,\s]+)|,\s*(?=,|$)|^\s*,/g
 
   exports.calculate = function(original) {
-    var lines = original.split(/\n+\s*/);
+//var original = document.getElementById("original");
+    var lines = original.value.split(/\n+\s*/);
     var commonLength = lines[0].match(regexp).length;
     var r = [];
     var removeQuotes = function(field) {
@@ -35,6 +36,9 @@
         r.push({value: errmsg.split("").splice(commonLength), rowClass: 'error'});
       }
     }
+    var template = fillTable.innerHTML;
+finaltable.innerHTML = _.template(template, {items: r});
+
     return r;
   };
 })(this);
