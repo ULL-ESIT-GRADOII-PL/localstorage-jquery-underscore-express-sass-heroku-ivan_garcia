@@ -8,7 +8,7 @@ var minifyHTML = require('gulp-minify-html');
 var minifyCSS = require('gulp-minify-css');
 
 gulp.task('minify', function () {
-  gulp.src('csv.js')
+  gulp.src('js/csv.js')
   .pipe(uglify())
   .pipe(gulp.dest('minified'));
 
@@ -16,7 +16,7 @@ gulp.task('minify', function () {
   .pipe(minifyHTML())
   .pipe(gulp.dest('./minified/'))
 
-  gulp.src('./*.css')
+  gulp.src('./css/*.css')
   .pipe(minifyCSS({keepBreaks:true}))
   .pipe(gulp.dest('./minified/'))
   });
