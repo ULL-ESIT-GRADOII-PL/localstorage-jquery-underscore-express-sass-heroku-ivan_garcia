@@ -15,8 +15,7 @@
       var removeescapedquotes = removelastquote.replace(/\\"/, '"');
       return removeescapedquotes;
     };
-//asignamos el localStorage
-if (window.localStorage) localStorage.original = original;
+
     for (var t in lines) {
       var temp = lines[t];
       var m = temp.match(regexp);
@@ -38,12 +37,4 @@ if (window.localStorage) localStorage.original = original;
     }
     return r;
   };
-
-//escribimos localStorage en id original
-window.onload = function () {
-// If the browser supports localStorage and we have some stored data
-if (window.localStorage && localStorage.original) {
-document.getElementById("original").value = localStorage.original;
-}
-};
 })(this);
