@@ -20,7 +20,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'tests/*.html',
+      'htpp://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js',
+	'https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+	'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js',
+
       '*.js',
       'tests/*.js'
     ],
@@ -28,13 +31,15 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
+      'gulpfile.js',
+      'main.js'
     ],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'tests/index.html': ['html2js']
+      //'tests/index.html': ['html2js']
     },
 
 
