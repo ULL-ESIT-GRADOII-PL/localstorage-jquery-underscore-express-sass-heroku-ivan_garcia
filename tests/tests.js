@@ -3,7 +3,7 @@ var assert = chai.assert;
 //var original;
 suite('csv', function() {
     if (typeof __html__ !== 'undefined') {
-	document.body.innerHTML = __html__["tests/index.html"];
+	document.body.innerHTML = __html__["index.html"];
 	original = document.getElementById("original");
 	finaltable = document.getElementById("finaltable");
     }
@@ -16,7 +16,7 @@ suite('csv', function() {
     test('Almacenamiento local', function () {
 	original.value = 'Funciona, el, almacenamiento, interno';
 	main();
-	assert.deepEqual(localStorage.original.value, 'Funciona, el, almacenamiento, interno');
+	assert.deepEqual(localStorage.original, 'Funciona, el, almacenamiento, interno');
     });
     test('Tabla normal', function () {
 	original.value = '1,2,3\n4,5,6';

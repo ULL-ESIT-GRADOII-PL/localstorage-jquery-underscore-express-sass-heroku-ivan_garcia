@@ -1,62 +1,62 @@
-th, td      {
-               vertical-align: top;
-               padding: 25px;
-               text-align: right;
-               font-size:large;
-               font-weight: normal;
-               text-transform: uppercase;
-               font-family: "Tw Cen MT", cursive;
-               background-color: rgba(255, 255, 255, 0.7);
+input {
+  position: right;
+  top: 1em;
+  left: 30%; }
 
-            }     /* Don't center table cells  */
-#converted  { color: black; text-transform: uppercase;
-font-family: "Tw Cen MT", cursive;font-weight: bold; font-size:large;          }     /* Calculated values in bold */
-input       {
-              text-align: right;       /* Align input to the right  */
-              border: none;
-              border-radius: 20px 20px 20px 20px;
-              padding: 5px  5px;
-              font-size:large;       }
-body
-{
- background-color: black;
- background-image: url("fondotests.jpg");
-background-size: 100%;
-background-position: center;
-background-repeat: no-repeat;
-background-attachment: fixed;
- font-family: "	Tw Cen MT";
-}
+textarea {
+  border-color: #eee; }
 
-h1:hover {
-  color: #green;
-  position: relative;
-}
+table {
+  font-size: 20px;
+  font-size: 2rem;
+  border-color: #eee; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: normal;
-    text-transform: uppercase;
-    font-family: "Tw Cen MT", cursive;
-    padding: 5px 15px;
-    color: black;
-    display:inline-block;
-    border-radius: 10px 10px 10px 10px;
-}
+#finaltable:hover td {
+  background-color: #eee; }
 
+tr:nth-child(odd) {
+  background-color: #eee; }
 
-  #perfil{
+tr:nth-child(even) {
+  background-color: rgba(0, 164, 42, 0.8); }
 
-    font-size: 20px;
-    font-style: italic;
-    font-weight: 50px;
-  }
+tr.error {
+  background-color: red; }
 
-  h2:hover{
-    color: #fff;
-    position: relative;
-  }
+html {
+  background: url("../images/test.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+#fondo_tabla {
+  background-color: #eee;
+  padding: 5%;
+  padding-right: 10%;
+  width: 650px; }
+
+#result {
+  position: top;
+  top: 1em;
+  left: 50%;
+  border-color: red;
+  font-size: 20px;
+  font-size: 2rem; }
+
+#header {
+  font-style: italic; }
+
+.boton {
+  padding: 15px 32px;
+  background-color: #eee;
+  border-color: #743EA5; }
+  .boton:hover {
+    background-color: #eee; }
+
+h1 {
+  font-size: 20px;
+  font-size: 2rem;
+  padding: 1%; }
+
+/*# sourceMappingURL=global.css.map */

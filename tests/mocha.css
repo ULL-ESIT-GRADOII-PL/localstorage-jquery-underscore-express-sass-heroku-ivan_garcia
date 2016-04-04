@@ -21,7 +21,7 @@ body {
 
 #mocha h1,
 #mocha h2 {
-  background-color: rgba(255, 255, 238, 0.5);
+  background-color: rgba(255, 255, 238, 0.8);
   margin: 0;
 }
 
@@ -78,12 +78,13 @@ body {
 }
 
 #mocha .test.pass::before {
+
   content: '✓';
-  font-size: 18px;
+  font-size: 20px;
   display: block;
   float: left;
   margin-right: 5px;
-  color: #00d6b2;
+  color: ##04B404;
 }
 
 #mocha .test.pass .duration {
@@ -110,6 +111,7 @@ body {
 }
 
 #mocha .test.pending::before {
+  background-color: rgba(255, 255, 238, 0.8);
   content: '◦';
   color: #0b97c4;
 }
@@ -119,11 +121,12 @@ body {
 }
 
 #mocha .test.fail pre {
-  background-color: rgba(255, 255, 238, 0.5);
+  background-color: rgba(255, 255, 238, 0.8);
   color: black;
 }
 
 #mocha .test.fail::before {
+  background-color: rgba(255, 255, 238, 0.8);
   content: '✖';
   font-size: 18px;
   display: block;
@@ -133,7 +136,7 @@ body {
 }
 
 #mocha .test pre.error {
-  background-color: rgba(255, 255, 238, 0.5);
+  background-color: rgba(255, 255, 238, 0.8);
   color: #c00;
   max-height: 300px;
   overflow: auto;
@@ -145,7 +148,7 @@ body {
  *      ^^ seriously
  */
 #mocha .test pre {
-  background-color: rgba(255, 255, 238, 0.5);
+  background-color: rgba(255, 255, 238, 0.8);
   display: block;
   float: left;
   clear: left;
@@ -224,7 +227,7 @@ body {
   font-size: 18px;
   margin: 0;
   z-index: 1;
-  background-color: rgba(255, 255, 238, 0.5);
+  background-color: rgba(255, 255, 238, 0.8);
 }
 
 #mocha-stats .progress {
