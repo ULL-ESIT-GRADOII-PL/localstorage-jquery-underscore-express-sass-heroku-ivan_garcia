@@ -18,7 +18,7 @@
   font-size: ($sizeValue * 10) + px;
   font-size: $sizeValue + rem;
 }
- 
+
 
 @mixin btn-theme {
    padding: 15px 32px;
@@ -50,7 +50,7 @@ tr:nth-child(even)    { background-color:$colorVerde }
 tr.error       { background-color: red;}
 
 html {
-  @include cover-background('../images/test.jpg');
+  @include cover-background('../css/images/test.jpg');
 
 }
 

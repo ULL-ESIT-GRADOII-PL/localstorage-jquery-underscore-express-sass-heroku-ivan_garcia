@@ -60,7 +60,7 @@ tr.error       { background-color: red;}
 
 html {
   @include centerer;
-  @include cover-background('../images/invierno.jpg');
+  @include cover-background('../invierno.jpg');
   padding: 10%;
 }
 

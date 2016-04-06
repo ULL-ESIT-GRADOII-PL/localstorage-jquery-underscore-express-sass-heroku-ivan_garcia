@@ -21,7 +21,9 @@
       var removeescapedquotes = removelastquote.replace(/\\"/, '"');
       return removeescapedquotes;
     };
-if (window.localStorage) localStorage.original = lines;
+if (window.localStorage) {
+  localStorage.original = original;
+}
     for (var t in lines) {
       var temp = lines[t];
       var m = temp.match(regexp);
