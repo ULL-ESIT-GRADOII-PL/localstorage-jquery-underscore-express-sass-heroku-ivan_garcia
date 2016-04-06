@@ -46,14 +46,13 @@
     "karma-phantomjs-launcher": "^0.1.4",
     "mocha": "^2.2.1",
     "morgan": "~1.6.1",
-    "phantomjs": "^1.9.16",
-    "serve-favicon": "~2.3.0"
+    "phantomjs": "^1.9.16"
   },
   "dependencies": {
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "express-ejs-layouts": "^1.1.0",
-    "underscore": "*"
+    "underscore": "^1.8.3"
   },
   "engines": {}
 }
