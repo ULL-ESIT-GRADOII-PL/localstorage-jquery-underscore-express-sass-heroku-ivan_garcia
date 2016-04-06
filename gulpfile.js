@@ -38,7 +38,7 @@ gulp.task('test', function() {
     });
 });
 
-gulp.task('default', function() {
+gulp.task('default', ['minify'], function() {
   gulp.src([])
     .pipe(karma({
       configFile: 'karma.conf.js',
