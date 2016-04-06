@@ -6,9 +6,14 @@
 
   exports.calculate = function(original) {
 //var a =original.value;
-    var lines = original.value.split(/\n+\s*/);
+    var lines = original.split(/\n+\s*/);
     var commonLength = lines[0].match(regexp).length;
     var r = [];
+    // Template using underscore
+    var row = "<% _.each(items, function(name) { %>"     +
+            "                    <td><%= name %></td>" +
+            "              <% }); %>";
+
     var removeQuotes = function(field) {
       var removecomma = field.replace(/,\s*$/, '');
       var remove1stquote = removecomma.replace(/^\s*"/, '');
@@ -41,6 +46,4 @@ if (window.localStorage) localStorage.original = lines;
 
     return r;
   };
-
-
 })(this);

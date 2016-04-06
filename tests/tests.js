@@ -3,12 +3,12 @@ var assert = chai.assert;
 //var original;
 suite('csv', function() {
     if (typeof __html__ !== 'undefined') {
-	document.body.innerHTML = __html__["index.html"];
+	document.body.innerHTML = __html__["tests/index.html"];
 	original = document.getElementById("original");
 	finaltable = document.getElementById("finaltable");
     }
     test('Intr. correcta', function () {
-	original.value = 'a, b, c, d\naa, bb, cc, dd';
+  original.value = 'a, b, c, d\naa, bb, cc, dd';
 	main();
 	var esperado = '\n\t    <table id="result" class="center">\n\t    \n\t    <tbody><tr class="">\n\t    \n\t    <td>a</td>\n\t    \n\t    <td>b</td>\n\t    \n\t    <td>c</td>\n\t    \n\t    <td>d</td>\n\t    \n\t    </tr>\n\t    \n\t    <tr class="">\n\t    \n\t    <td>aa</td>\n\t    \n\t    <td>bb</td>\n\t    \n\t    <td>cc</td>\n\t    \n\t    <td>dd</td>\n\t    \n\t    </tr>\n\t    \n\t    </tbody></table>\n\t'
 	assert.deepEqual(finaltable.innerHTML, esperado);
@@ -16,6 +16,8 @@ suite('csv', function() {
     test('Almacenamiento local', function () {
 	original.value = 'Funciona, el, almacenamiento, interno';
 	main();
+  original.value = 'pepe';
+
 	assert.deepEqual(localStorage.original, 'Funciona, el, almacenamiento, interno');
     });
     test('Tabla normal', function () {
