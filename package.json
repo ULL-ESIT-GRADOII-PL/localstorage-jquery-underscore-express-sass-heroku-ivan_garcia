@@ -52,7 +52,7 @@
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "express-ejs-layouts": "^1.1.0",
-    "underscore": "^1.8.3"
-  },
-  "engines": {}
+    "underscore": "^1.8.3",
+    "body-parser":"*"
+  }
 }
