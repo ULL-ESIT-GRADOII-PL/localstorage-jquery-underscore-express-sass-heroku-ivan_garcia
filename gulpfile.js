@@ -38,6 +38,11 @@ gulp.task('test', function() {
     });
 });
 
+gulp.task('deploy', function() {
+  return gulp.src('./minified/**/*')
+    .pipe(ghPages());
+});
+
 gulp.task('default', ['minify'], function() {
   gulp.src([])
     .pipe(karma({
