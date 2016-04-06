@@ -9,10 +9,6 @@
     var lines = original.split(/\n+\s*/);
     var commonLength = lines[0].match(regexp).length;
     var r = [];
-    // Template using underscore
-    var row = "<% _.each(items, function(name) { %>"     +
-            "                    <td><%= name %></td>" +
-            "              <% }); %>";
 
     var removeQuotes = function(field) {
       var removecomma = field.replace(/,\s*$/, '');

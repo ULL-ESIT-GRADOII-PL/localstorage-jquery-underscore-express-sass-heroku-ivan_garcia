@@ -50,7 +50,6 @@
     "morgan": "~1.6.1",
     "phantomjs": "^1.9.16",
     "serve-favicon": "~2.3.0",
-    "underscore": "^1.8.2"
   },
   "dependencies": {
     "jquery": "^2.2.2",
