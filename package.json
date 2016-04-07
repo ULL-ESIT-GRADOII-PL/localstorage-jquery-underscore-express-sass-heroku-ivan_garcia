@@ -11,6 +11,10 @@
     "type": "git",
     "url": ""
   },
+
+  "engines" : {
+    "npm" : "*"
+  },
   "keywords": [
     "csv"
   ],

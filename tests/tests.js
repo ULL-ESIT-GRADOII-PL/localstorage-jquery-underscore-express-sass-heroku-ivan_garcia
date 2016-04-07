@@ -26,14 +26,28 @@ suite('csv', function() {
 	assert.deepEqual(finaltable.innerHTML, valueExpected);
     });
 
-    test('Tabla compleja', function () {
+    test('Tabla con uso de comas', function () {
+    original.value = '1,,3,\n6,7,8,';
+    main();
+    var valueExpected = '\n\t    <table id="result" class="center">\n\t    \n\t    <tbody><tr class="">\n\t    \n\t    <td>1</td>\n\t    \n\t    <td></td>\n\t    \n\t    <td>3</td>\n\t    \n\t    <td></td>\n\t    \n\t    </tr>\n\t    \n\t    <tr class="">\n\t    \n\t    <td>6</td>\n\t    \n\t    <td>7</td>\n\t    \n\t    <td>8</td>\n\t    \n\t    <td></td>\n\t    \n\t    </tr>\n\t    \n\t    </tbody></table>\n\t';
+    assert.deepEqual(finaltable.innerHTML, valueExpected);
+    });
+
+    test('Tabla con uso de comas. Erroneo', function () {
+    original.value = '1,,3,\n6,7,8,,,,';
+    main();
+    var valueExpected = '\n\t    <table id="result" class="center">\n\t    \n\t    <tbody><tr class="">\n\t    \n\t    <td>1</td>\n\t    \n\t    <td></td>\n\t    \n\t    <td>3</td>\n\t    \n\t    <td></td>\n\t    \n\t    </tr>\n\t    \n\t    <tr class="error">\n\t    \n\t    <td>6</td>\n\t    \n\t    <td>7</td>\n\t    \n\t    <td>8</td>\n\t    \n\t    <td></td>\n\t    \n\t    <td></td>\n\t    \n\t    <td></td>\n\t    \n\t    <td></td>\n\t    \n\t    </tr>\n\t    \n\t    </tbody></table>\n\t';
+    assert.deepEqual(finaltable.innerHTML, valueExpected);
+    });
+
+    test('Tabla con uso de comillas', function () {
 	original.value = '1,2,3,"4,5"\n6,7,8,"9,10"';
 	main();
 	var valueExpected = '\n\t    <table id="result" class="center">\n\t    \n\t    <tbody><tr class="">\n\t    \n\t    <td>1</td>\n\t    \n\t    <td>2</td>\n\t    \n\t    <td>3</td>\n\t    \n\t    <td>4,5</td>\n\t    \n\t    </tr>\n\t    \n\t    <tr class="">\n\t    \n\t    <td>6</td>\n\t    \n\t    <td>7</td>\n\t    \n\t    <td>8</td>\n\t    \n\t    <td>9,10</td>\n\t    \n\t    </tr>\n\t    \n\t    </tbody></table>\n\t';
 	assert.deepEqual(finaltable.innerHTML, valueExpected);
     });
 
-    test('Creacion de tabla erronea', function () {
+    test('Creacion de tabla con uso de comillas erronea', function () {
 	original.value = '1,2,3,"4,5"\n6,7,8,"9,7",b';
 	main();
 	var valueExpected = '\n\t    <table id="result" class="center">\n\t    \n\t    <tbody><tr class="">\n\t    \n\t    <td>1</td>\n\t    \n\t    <td>2</td>\n\t    \n\t    <td>3</td>\n\t    \n\t    <td>4,5</td>\n\t    \n\t    </tr>\n\t    \n\t    <tr class="error">\n\t    \n\t    <td>6</td>\n\t    \n\t    <td>7</td>\n\t    \n\t    <td>8</td>\n\t    \n\t    <td>9,7</td>\n\t    \n\t    <td>b</td>\n\t    \n\t    </tr>\n\t    \n\t    </tbody></table>\n\t';
