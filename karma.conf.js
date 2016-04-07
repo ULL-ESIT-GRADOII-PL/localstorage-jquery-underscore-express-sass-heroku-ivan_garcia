@@ -60,13 +60,6 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome', 'Firefox'],
 
-    customLaunchers: {
-     Chrome_travis_ci: {
-       base: 'Chrome',
-       flags: ['--no-sandbox']
-     }
-   },
-
    // If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000,
 
