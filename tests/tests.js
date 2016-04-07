@@ -16,8 +16,7 @@ suite('csv', function() {
     test('Almacenamiento local', function () {
 	original.value = 'Funciona, el, almacenamiento, interno';
 	main();
-  original.value = 'pepe';
-
+  original.value = 'nuevo valor';
 	assert.deepEqual(localStorage.original, 'Funciona, el, almacenamiento, interno');
     });
     test('Tabla normal', function () {
