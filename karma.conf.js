@@ -76,4 +76,7 @@ module.exports = function(config) {
 
 
   });
+  if (process.env.TRAVIS) {
+    config.browsers = ['PhantomJS', 'Firefox', 'chromeTravisCI'];
+  }
 };
