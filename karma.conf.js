@@ -24,13 +24,12 @@ module.exports = function(config) {
       'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js',
       'tests/index.html',
       'js/*.js',
-      'tests/*.js'
+      'tests/tests.js'
     ],
 
     // list of files to exclude
     exclude: [
-      'gulpfile.js',
-      'app.js'
+      'gulpfile.js'
     ],
 
     // preprocess matching files before serving them to the browser
